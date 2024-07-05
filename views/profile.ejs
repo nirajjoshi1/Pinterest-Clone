@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/stylesheets/profile.css" />
+  <title>Profile @<%=user.username%>
+  </title>
+</head>
+
+<body>
+  <nav>
+    <div id="logo">
+      <h2>Pinterest</h2>
+    </div>
+    <div id="nav-items">
+      <h4><a href="/feed">Feed</a></h4>
+      <h4><a href="/setting">Setitng</a></h4>
+      <h4><a href="/">Log Out</a></h4>
+    </div>
+  </nav>
+
+  <form id="formupload" action="/fileupload" method="post" enctype="multipart/form-data">
+    <input type="file" name="image" id="image" />
+  </form>
+
+  <div class="container">
+    <div class="card">
+      <div class="card__text">
+        <div class="card__img">
+          <img src="/images/uploads/<%=user.profileImage%>" alt="image" />
+        </div>
+        <div id="edit">
+          <button id="edit-profile">Edit</button>
+        </div>
+        <h1>
+          <%=user.fullname%>
+        </h1>
+        <h3>@<%=user.username%>
+        </h3>
+      </div>
+      <div class="card__btn">
+        <button id="link"><a href="/add">Add post</a></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="containers">
+    <div class="cards">
+      <% user.posts.forEach(function(post){ %>
+        <div class="pins" style="width: 18rem">
+          <img src="/images/uploads/<%= post.image %>" class="card-img-top" alt=" ... " />
+          <div class="card-body">
+            <h5 class="card-title">
+              <%= post.title %>
+            </h5>
+            <h5 class="card-title1">
+              <%= post.description %>
+            </h5>
+
+          </div>
+        </div>
+        <% }) %>
+    </div>
+  </div>
+
+  <script>
+    const icon = document.querySelector("#edit-profile");
+    const formSubmit = document.querySelector("#formupload");
+    const input = document.querySelector("#image");
+    icon.addEventListener("click", function () {
+      input.click();
+    });
+    input.addEventListener("change", function () {
+      formSubmit.submit();
+    })
+  </script>
+</body>
+
+</html>

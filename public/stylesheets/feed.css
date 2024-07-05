@@ -1,0 +1,118 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway|Reenie+Beanie);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: sans-serif;
+  background: #dadada;
+}
+
+nav {
+  text-align: center;
+  height: 8vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  background-color: #6bbfde5d;
+}
+
+#logo {
+  text-align: center;
+  margin-left: 3rem;
+}
+
+a {
+  text-decoration: none;
+}
+#nav-items {
+  display: flex;
+  color: #dadada;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-right: 2rem;
+}
+
+#nav-items h4 {
+  position: relative;
+  font-size: 20px;
+  font-weight: 400;
+  margin-right: 2rem;
+  margin-left: 1.6rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+#nav-items h4 a {
+  color: #fff;
+  position: relative;
+  transition: all ease-in 0.4s;
+  -webkit-transition: all ease-in 0.4s;
+  -moz-transition: all ease-in 0.4s;
+  -ms-transition: all ease-in 0.4s;
+  -o-transition: all ease-in 0.4s;
+}
+
+#nav-items h4 a:hover {
+  color: rgb(230, 251, 1);
+  border-bottom: 3px solid rgb(24, 24, 236);
+}
+#container{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 50px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  gap: 10px;
+}
+
+.container img {
+  margin-top: 2rem;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0.6rem;
+  border: none;
+  object-position: center;
+  -webkit-border-radius: 0.6rem;
+  -moz-border-radius: 0.6rem;
+  -ms-border-radius: 0.6rem;
+  -o-border-radius: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h4,h5{
+  margin-top: 0;
+  width: 100%;
+  text-transform: uppercase;
+  height: 20px;
+  text-align: center;
+}
+#text{
+  width: 100%;
+  min-height: 60px;
+  padding: 10px;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Raleway|Reenie+Beanie);
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            font-family: sans-serif;
+            background: #dadada;
+        }
+
+        nav {
+            text-align: center;
+            height: 8vh;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+            background-color: #6bbfde5d;
+        }
+
+        #logo {
+            text-align: center;
+            margin-left: 3rem;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #nav-items {
+            display: flex;
+            color: #dadada;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            margin-right: 2rem;
+        }
+
+        #nav-items h4 {
+            position: relative;
+            font-size: 20px;
+            font-weight: 400;
+            margin-right: 2rem;
+            margin-left: 1.6rem;
+            font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        }
+
+        #nav-items h4 a {
+            color: #fff;
+            position: relative;
+            transition: all ease-in 0.4s;
+            -webkit-transition: all ease-in 0.4s;
+            -moz-transition: all ease-in 0.4s;
+            -ms-transition: all ease-in 0.4s;
+            -o-transition: all ease-in 0.4s;
+        }
+
+        #nav-items h4 a:hover {
+            color: rgb(230, 251, 1);
+            border-bottom: 3px solid rgb(24, 24, 236);
+        }
+
+        #container {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            width: 100%;
+            flex-wrap: wrap;
+            gap: 40px;
+            padding: 50px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            gap: 10px;
+        }
+
+        .container img {
+            margin-top: 2rem;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 0.6rem;
+            border: none;
+            object-position: center;
+            -webkit-border-radius: 0.6rem;
+            -moz-border-radius: 0.6rem;
+            -ms-border-radius: 0.6rem;
+            -o-border-radius: 0.6rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h4,
+        h5 {
+            margin-top: 0;
+            width: 100%;
+            text-transform: uppercase;
+            height: 20px;
+            text-align: center;
+        }
+
+        #text {
+            width: 100%;
+            min-height: 60px;
+            padding: 10px;
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+ h1 {
+            font-size: 4rem;
+            font-weight: 500;
+            font-style: oblique;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 0;
+            text-transform: capitalize;
+            color: #000000;
+        }
+
+        hr {
+            opacity: 0.5;
+        }
+
+        form {
+            margin-top: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            gap: 1.8rem;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        input {
+            padding: 1rem;
+            border: none;
+            border-radius: 0.3rem;
+            -webkit-border-radius: 0.3rem;
+            -moz-border-radius: 0.3rem;
+            -ms-border-radius: 0.3rem;
+            -o-border-radius: 0.3rem;
+        }
+        input:last-child{
+         margin: 20px;
+
+        }
+
+        #post {
+            width: 15%;
+            background-color: gray;
+            cursor: pointer;
+
+        }
+
+        .detail:focus {
+            box-shadow: 0px -7px 3px -2px rgba(30, 191, 212, 0.4),
+                0px 7px 3px -2px rgba(133, 221, 106, 0.4),
+                7px 0px 3px -2px rgba(75, 219, 178, 0.4),
+                -7px 0px 3px -2px rgba(51, 208, 95, 0.4);
+            outline: none;
+        }
+
+        .detail:hover {
+            background-color: rgb(20, 107, 107);
+        }
+
+        .container {
+            margin-top: -50px;
+        }
+
+        .content {
+            margin-top: 10px;
+        }
+
+        .text {
+            margin-top: 50px;
+        }
+
+        #pass {
+            margin-top: 30px;
+        }
+        .btn{
+            margin-top: 20px;
+            padding: .5rem;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <form action="/forgot" method="post">
+        <h1>To chnage your password you need to enter tour username</h1>
+        <div class="container">
+            <div class="content">
+                <img src="/images/bgimg.jpg" alt="pin logo" class="img1" />
+                <div class="text">
+                    <input type="text" placeholder="Username" name="username" class="detail" /><br />
+                    <input id="pass" type="password" placeholder="New Password" name="password" class="detail" /><br>
+                    <button class="btn int">Submit</button>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</body>
+
+</html>

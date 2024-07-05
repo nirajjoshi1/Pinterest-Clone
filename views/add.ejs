@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Pictures</title>
+    <link rel="stylesheet" href="/stylesheets/add.css">
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div id="logo">
+            <h2>Pinterest</h2>
+        </div>
+        <div id="nav-items">
+            <h4><a href="/feed">Feed</a></h4>
+            <h4><a href="/Profile">Setitng</a></h4>
+            <h4><a href="/">Log Out</a></h4>
+        </div>
+    </nav>
+    <div id="add">
+        <h1>create new post</h1>
+        <hr>
+        <form action="/createpost" method="POST" enctype="multipart/form-data">
+            <input class="detail"  type="file" name="postImage"/>
+            <input class="detail"  type="text" name="title" placeholder="Title" />
+            <input class="detail"  type="text" name="description" placeholder="Description" />
+            <input class="detail"  id="post " type="submit" value="Post" />
+
+        </form>
+
+</body>
+
+</html>

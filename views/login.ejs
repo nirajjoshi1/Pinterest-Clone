@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In - Pinterest</title>
+    <link rel="stylesheet" href="/stylesheets/login.css">
+</head>
+
+<body>
+
+    <nav>
+        <div id="logo">
+            <h2>Pinterest</h2>
+        </div>
+        <div id="nav-items">
+            <h4><a href="/feed">Feed</a></h4>
+            <h4><a href="/">Sign Up</a></h4>
+            <h4><a href="/setting">Setitng</a></h4>
+        </div>
+    </nav>
+
+    <form action="/login" method="post">
+        <div class="container">
+            <div class="content">
+                <img src="/images/bgimg.jpg" alt="pin logo" class="img1" />
+                <input type="text" placeholder="Username" name="username" class="detail" /><br />
+                <input type="password" placeholder="Password" name="password" class="detail" />
+                <% if(error.length> 0){%>
+                    <p class="error">
+                        <%= error %>
+                    </p>
+                    <%}%>
+                        <a id="forgot" href="/forgot">Forgot your password?</a>
+                                        <button class="btn int">Log In</button>
+            </div>
+        </div>
+    </form>
+
+</body>
+
+
+
+</html>

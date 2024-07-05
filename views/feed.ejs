@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feed - Pinterest</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/stylesheets/feed.css" />
+</head>
+<body>
+<nav>
+    <div id="logo">
+        <h2>Pinterest</h2>
+    </div>
+    <div id="nav-items">
+        <h4><a href="/add">Upload Post</a></h4>
+        <h4><a href="/profile">Profile</a></h4>
+        <h4><a href="/logout">Log Out</a></h4>
+    </div>
+</nav>
+<div id="container">
+    <%posts.forEach(function(elem){%>
+        <div class="container">
+            <h2>Posted by:@<%=elem.user.fullname%><%=elem.user.username.length%>
+            </h2>
+
+            <img src="/images/uploads/<%=elem.image%>" />
+            <div id="text">
+        <h3><%=elem.title%>
+        </h3><br>
+        <h5><%=elem.description%>
+        </h5>
+        </div>
+                </div>
+
+        <%})%>
+</div>
+
+
+    <script>
+
+const img =  document.querySelector("img");
+function repeat(){
+    img.forEach(elem => {
+        elem.style.display = "none"
+    });
+}
+repeat();
+       
+    </script> 
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
